@@ -12,7 +12,7 @@ require 'open-uri'
 closed = 0
 non_closed = 0
 i = 0
-ARGV.each do |id|
+ARGF.read.split(" ").each do |id|
   begin
     page = Nokogiri::HTML(open("http://stackoverflow.com/questions/#{id}"))
     begin
